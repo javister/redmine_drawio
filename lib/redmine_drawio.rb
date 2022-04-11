@@ -3,20 +3,20 @@
 # Drawio libraries
 
 # Patches
-require 'redmine_drawio/patches/string_patch'
+require File.dirname(__FILE__) + '/redmine_drawio/patches/string_patch'
 
 # Helpers
-require 'redmine_drawio/helpers/drawio_dmsf_helper'
-require 'redmine_drawio/helpers/drawio_settings_helper'
-require 'redmine_drawio/helpers/textile_helper'
-require 'redmine_drawio/helpers/markdown_helper'
+require_relative 'redmine_drawio/helpers/dmsf_helper'
+require_relative 'redmine_drawio/helpers/settings_helper'
+require_relative 'redmine_drawio/helpers/textile_helper'
+require_relative 'redmine_drawio/helpers/markdown_helper'
 
 # Hooks
-require 'redmine_drawio/hooks/view_hooks'
-require 'redmine_drawio/hooks/macro_dialog'
+require_relative 'redmine_drawio/hooks/view_hooks'
+require_relative 'redmine_drawio/hooks/macro_dialog'
 
 # Macros
-require 'redmine_drawio/macros'
+require_relative 'redmine_drawio/macros'
 
 
 module RedmineDrawio
